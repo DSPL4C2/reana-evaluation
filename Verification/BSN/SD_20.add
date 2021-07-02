@@ -1,0 +1,53 @@
+.ver DDDMP-2.0
+.add
+.mode A
+.varinfo 0
+.dd SD_20
+.nnodes 37
+.nvars 26
+.nsuppvars 17
+.suppvarnames ACC Temperature Root Position SPO2 Memory SensorInformation ECG TEMP Storage SQLite PulseRate Fall Oxygenation Monitoring Sensor o_7
+.orderedvarnames Sensor ACC TEMP Fall Position Temperature PulseRate Oxygenation ECG Memory SQLite SPO2 SensorInformation Monitoring Root Storage o_1 o_2 o_3 o_4 o_5 o_6 o_7 o_8 o_9 o_10
+.ids 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 22
+.permids 1 5 14 4 11 9 12 8 2 15 10 6 3 7 13 0 22
+.nroots 1
+.rootids 37
+.nodes
+1 T 0 0 0
+2 T 1 0 0
+3 22 16 1 2
+4 T 0x1,e182ce6abd70cp-1 0 0
+5 22 16 4 2
+6 9 15 5 3
+7 2 14 6 3
+8 14 13 7 3
+9 6 12 8 3
+10 4 11 9 3
+11 10 10 3 10
+12 10 10 10 3
+13 5 9 11 12
+14 10 10 3 9
+15 10 10 9 3
+16 5 9 14 15
+17 7 8 16 13
+18 13 7 13 17
+19 13 7 13 16
+20 11 6 18 19
+21 13 7 13 3
+22 11 6 18 21
+23 1 5 20 22
+24 3 4 20 23
+25 12 3 20 24
+26 1 5 3 20
+27 1 5 3 22
+28 3 4 26 27
+29 12 3 26 28
+30 8 2 25 29
+31 3 4 3 23
+32 12 3 3 31
+33 3 4 3 27
+34 12 3 3 33
+35 8 2 32 34
+36 0 1 30 35
+37 15 0 36 3
+.end

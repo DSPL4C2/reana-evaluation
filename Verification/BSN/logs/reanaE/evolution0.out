@@ -1,0 +1,35 @@
+++++++ Alpha Time: 85 ++++++
+Node QoSChange deriveSingle: 0
+Node Reconfiguration deriveSingle: 1
+Node n0 deriveSingle: 0
+Node n2 deriveSingle: 0
+Node n3 deriveSingle: 0
+Node n1 deriveSingle: 0
+Node Capture deriveSingle: 0
+Node n5 deriveSingle: 1
+Node n6 deriveSingle: 0
+Node n4 deriveSingle: 0
+Node n16 deriveSingle: 1
+Node n10 deriveSingle: 0
+Node n13 deriveSingle: 0
+Node n7 deriveSingle: 0
+Node Situation deriveSingle: 1
+Node AD_SPL_0 deriveSingle: 5
+++++++ Sigma Time: 11 ++++++
+Family-wide reliability decision diagram dumped at family-reliability.dot
+Configurations:
+=========================================
+[ACC, Root, Memory, SensorInformation, ECG, TEMP, Storage, PulseRate, Monitoring, Sensor] --> 0.9723825311715786
+[ACC, Root, Position, Memory, SensorInformation, ECG, Storage, Fall, Monitoring, Sensor] --> 0.9655962394871564
+[ACC, Root, Position, SPO2, SensorInformation, ECG, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9627023465918173
+[ACC, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9627023465918173
+[ACC, Root, SensorInformation, ECG, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9723825311715786
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, ECG, TEMP, Storage, Fall, Oxygenation, Monitoring, Sensor] --> 0.9408020598604697
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, TEMP, Storage, Fall, Monitoring, Sensor] --> 0.9531185294091392
+[Root, SPO2, SensorInformation, Storage, SQLite, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9684988314535216
+[Root, SPO2, SensorInformation, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9753055227987119
+[Temperature, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9559836132540451
+=========================================
+>>>> Total valid configurations: 10
+Total analysis time: 116 ms
+Total running time: 502 ms

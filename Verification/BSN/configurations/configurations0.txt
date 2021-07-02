@@ -1,0 +1,10 @@
+ACC,Root,Memory,SensorInformation,ECG,TEMP,Storage,PulseRate,Monitoring,Sensor
+ACC,Root,Position,Memory,SensorInformation,ECG,Storage,Fall,Monitoring,Sensor
+ACC,Root,Position,SPO2,SensorInformation,ECG,Storage,SQLite,PulseRate,Monitoring,Sensor
+ACC,Root,SensorInformation,ECG,TEMP,Storage,SQLite,PulseRate,Monitoring,Sensor
+ACC,Root,SPO2,Memory,SensorInformation,TEMP,Storage,PulseRate,Oxygenation,Monitoring,Sensor
+ACC,Temperature,Root,Position,SPO2,Memory,SensorInformation,ECG,TEMP,Storage,Fall,Oxygenation,Monitoring,Sensor
+ACC,Temperature,Root,Position,SPO2,Memory,SensorInformation,TEMP,Storage,Fall,Monitoring,Sensor
+Root,SPO2,SensorInformation,Storage,SQLite,PulseRate,Oxygenation,Monitoring,Sensor
+Root,SPO2,SensorInformation,TEMP,Storage,SQLite,PulseRate,Monitoring,Sensor
+Temperature,Root,SPO2,Memory,SensorInformation,TEMP,Storage,PulseRate,Oxygenation,Monitoring,Sensor

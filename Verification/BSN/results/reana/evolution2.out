@@ -1,0 +1,40 @@
+[ACC, Root, Memory, SensorInformation, ECG, TEMP, Storage, PulseRate, Monitoring, Sensor, o_1, o_2] --> 0.8631145797027178
+[ACC, Root, Memory, SensorInformation, ECG, TEMP, Storage, PulseRate, Monitoring, Sensor, o_1] --> 0.9198973365056895
+[ACC, Root, Memory, SensorInformation, ECG, TEMP, Storage, PulseRate, Monitoring, Sensor, o_2] --> 0.9123600062703638
+[ACC, Root, Memory, SensorInformation, ECG, TEMP, Storage, PulseRate, Monitoring, Sensor] --> 0.9723825311715786
+[ACC, Root, Position, Memory, SensorInformation, ECG, Storage, Fall, Monitoring, Sensor, o_1, o_2] --> 0.8570908728721529
+[ACC, Root, Position, Memory, SensorInformation, ECG, Storage, Fall, Monitoring, Sensor, o_1] --> 0.9134773408299866
+[ACC, Root, Position, Memory, SensorInformation, ECG, Storage, Fall, Monitoring, Sensor, o_2] --> 0.9059926138859161
+[ACC, Root, Position, Memory, SensorInformation, ECG, Storage, Fall, Monitoring, Sensor] --> 0.9655962394871564
+[ACC, Root, Position, SPO2, SensorInformation, ECG, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1, o_2] --> 0.8545221706690642
+[ACC, Root, Position, SPO2, SensorInformation, ECG, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1] --> 0.9107396483260418
+[ACC, Root, Position, SPO2, SensorInformation, ECG, Storage, SQLite, PulseRate, Monitoring, Sensor, o_2] --> 0.9032773531161074
+[ACC, Root, Position, SPO2, SensorInformation, ECG, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9627023465918173
+[ACC, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_1, o_2] --> 0.8545221706690642
+[ACC, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_1] --> 0.9107396483260418
+[ACC, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_2] --> 0.9032773531161074
+[ACC, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9627023465918173
+[ACC, Root, SensorInformation, ECG, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1, o_2] --> 0.8631145797027178
+[ACC, Root, SensorInformation, ECG, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1] --> 0.9198973365056895
+[ACC, Root, SensorInformation, ECG, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_2] --> 0.9123600062703638
+[ACC, Root, SensorInformation, ECG, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9723825311715786
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, ECG, TEMP, Storage, Fall, Oxygenation, Monitoring, Sensor, o_1, o_2] --> 0.8350828490322169
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, ECG, TEMP, Storage, Fall, Oxygenation, Monitoring, Sensor, o_1] --> 0.8900214486596979
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, ECG, TEMP, Storage, Fall, Oxygenation, Monitoring, Sensor, o_2] --> 0.8827289114288006
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, ECG, TEMP, Storage, Fall, Oxygenation, Monitoring, Sensor] --> 0.9408020598604697
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, TEMP, Storage, Fall, Monitoring, Sensor, o_1, o_2] --> 0.8460153000966277
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, TEMP, Storage, Fall, Monitoring, Sensor, o_1] --> 0.9016731260292242
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, TEMP, Storage, Fall, Monitoring, Sensor, o_2] --> 0.894285118862015
+[ACC, Temperature, Root, Position, SPO2, Memory, SensorInformation, TEMP, Storage, Fall, Monitoring, Sensor] --> 0.9531185294091392
+[Root, SPO2, SensorInformation, Storage, SQLite, PulseRate, Oxygenation, Monitoring, Sensor, o_1, o_2] --> 0.8596672966197896
+[Root, SPO2, SensorInformation, Storage, SQLite, PulseRate, Oxygenation, Monitoring, Sensor, o_1] --> 0.9162232628650163
+[Root, SPO2, SensorInformation, Storage, SQLite, PulseRate, Oxygenation, Monitoring, Sensor, o_2] --> 0.9087160367567922
+[Root, SPO2, SensorInformation, Storage, SQLite, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9684988314535216
+[Root, SPO2, SensorInformation, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1, o_2] --> 0.8657091107734146
+[Root, SPO2, SensorInformation, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_1] --> 0.9226625571120166
+[Root, SPO2, SensorInformation, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor, o_2] --> 0.9151025695865171
+[Root, SPO2, SensorInformation, TEMP, Storage, SQLite, PulseRate, Monitoring, Sensor] --> 0.9753055227987119
+[Temperature, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_1, o_2] --> 0.8485584305615792
+[Temperature, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_1] --> 0.9043835644763434
+[Temperature, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor, o_2] --> 0.8969733488855984
+[Temperature, Root, SPO2, Memory, SensorInformation, TEMP, Storage, PulseRate, Oxygenation, Monitoring, Sensor] --> 0.9559836132540451
