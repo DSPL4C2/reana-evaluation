@@ -24,7 +24,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-# Usage mode ./evolutionAwareVerification.sh
+# Usage: ./evolutionAwareVerification.sh <JAR1> <JAR2>
 # Declare parameters and assign their values.
 
 while [ $# -gt 0 ]; do
@@ -36,8 +36,16 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-REANA_JAR="reana.jar"
-REANAE_JAR="reanaE.jar"
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    REANA_JAR="reana.jar"
+    REANAE_JAR="reanaE.jar"
+  else
+    REANA_JAR=$1
+    REANAE_JAR=$2
+fi
+
 COMMAND_REANA="java -Xms$xms -Xmx$xmx -jar $REANA_JAR"
 COMMAND_REANAE="java -Xms$xms -Xmx$xmx -jar $REANAE_JAR"
 
@@ -66,12 +74,6 @@ mkdir -p "$RESULTS_DIR"
 mkdir -p "$RESULTS_DIR/reana"
 mkdir -p "$RESULTS_DIR/reanaE"
 mkdir -p "$CONFIGURATIONS_DIR"
-
-# eval "$COMMAND --all-configurations                                \
-#                --uml-model=$spl/bm$spl$initial_evolution.xml       \
-#                --feature-model=$spl/fm$spl$initial_evolution.txt   \
-#                --persisted-analyses=$PERSISTED_ANALYSES_PATH       \
-#                >> $LOGS_DIR/bootstrap.out"
 
 eval "$COMMAND_REANA --all-configurations                                \
   --uml-model=$spl/bm$spl$initial_evolution.xml       \
