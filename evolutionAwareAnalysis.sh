@@ -6,6 +6,7 @@ CLASSES="out/production/reana-spl"  # Change this to the path where your IDE put
 CLASSPATH=$CLASSES:$LIBS
 
 # Default values
+JAR="reanaE.jar"
 xms=1024m
 xmx=15360m
 spl=${spl:-BSN}
@@ -16,7 +17,7 @@ iterations=5
 # Usage mode ./evolutionAwareAnalysis <<spl>> <<initial_evolution>> <<final_evolution>> <<iterations>> <<persist>> <<xms>> <<xmx>>
 # Declare parameters and assign their values.
 
-while [ $# -gt 0 ]; do 
+while [ $# -gt 0 ]; do
 	if [[ $1 == *"--"* ]]; then
 		param="${1/--/}"
 		declare $param="$2"
@@ -25,7 +26,6 @@ while [ $# -gt 0 ]; do
 	shift
 done
 
-JAR="reanaE.jar"
 COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 # Path were we dump and read ADDs for previous analyses
 PERSISTED_ANALYSES_PATH=Analyses/$spl
@@ -46,10 +46,10 @@ eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$initial_evolution.xm
 
 # 2nd step: perform the analysis of the evolutions
 
-for i in $(seq 1 $iterations ); do 
+for i in $(seq 1 $iterations ); do
 	for e in $(seq $(expr $initial_evolution + 1) $final_evolution); do
 		mkdir -p $LOGS_DIR/$i
-		echo ----------   Iteration $i     Evolution $e   ---------- 
+		echo ----------   Iteration $i     Evolution $e   ----------
 		eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$e.xml --feature-model=$spl/fm$spl$e.txt --persisted-analyses=$PERSISTED_ANALYSES_PATH >> $LOGS_DIR/$i/evolution$e.out"
 	done
 done
