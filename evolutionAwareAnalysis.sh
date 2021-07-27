@@ -31,6 +31,11 @@ COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 PERSISTED_ANALYSES_PATH=Analyses/$spl
 # Path were we save analysis stats
 LOGS_DIR=$PERSISTED_ANALYSES_PATH/logs
+MEMORY_DIR=$PERSISTED_ANALYSES_PATH/logs/memory_usage
+TIME_DIR=$PERSISTED_ANALYSES_PATH/logs/running_time
+
+MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory"$SPL"ReanaE.out
+TIME_LOG_FILE=$MEMORY_DIR/totalTime"$SPL"ReanaE.out
 
 # 1st step: perform the analysis of the original spl
 echo "1st step - analysis of the original spl"
@@ -40,6 +45,8 @@ rm variableStore.add
 
 mkdir -p $PERSISTED_ANALYSES_PATH
 mkdir -p $LOGS_DIR
+mkdir -p $MEMORY_DIR
+mkdir -p $TIME_DIR
 
 eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$initial_evolution.xml --feature-model=$spl/fm$spl$initial_evolution.txt --persisted-analyses=$PERSISTED_ANALYSES_PATH"
 
@@ -57,9 +64,11 @@ done
 # 3rd step: recover all analyses and total times of all evolutions
 for e in $(seq $(expr $initial_evolution + 1) $final_evolution); do
 	echo ---------- Evolution $e ---------- >> $LOGS_DIR/analysisTime.out
-	echo ---------- Evolution $e ---------- >> $LOGS_DIR/totalTime.out
+	echo ---------- Evolution $e ---------- >> $MEMORY_LOG_FILE
+	echo ---------- Evolution $e ---------- >> $TIME_LOG_FILE
 	for i in $(seq 1 $iterations ); do
 		cat $LOGS_DIR/$i/evolution$e.out | grep "Total analysis" | awk '{print $4}' >> $LOGS_DIR/analysisTime.out
-		cat $LOGS_DIR/$i/evolution$e.out | grep "Total running" | awk '{print $4}' >> $LOGS_DIR/totalTime.out
+		cat $LOGS_DIR/$i/evolution$e.out | grep "Total running" | awk '{print $4}' >> $TIME_LOG_FILE
+		cat $LOGS_DIR/$i/evolution$e.out | grep "Total memory" | awk '{print $4}' >> $MEMORY_LOG_FILE
 	done
 done
