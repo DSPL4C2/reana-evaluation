@@ -48,7 +48,10 @@ mkdir -p $LOGS_DIR
 mkdir -p $MEMORY_DIR
 mkdir -p $TIME_DIR
 
-eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$initial_evolution.xml --feature-model=$spl/fm$spl$initial_evolution.txt"
+eval "$COMMAND --stats \
+  --all-configurations \
+  --uml-model=$spl/bm$spl$initial_evolution.xml \
+  --feature-model=$spl/fm$spl$initial_evolution.txt"
 
 
 # 2nd step: perform the analysis of the evolutions
@@ -57,7 +60,10 @@ for i in $(seq 1 $iterations ); do
 	for e in $(seq $(expr $initial_evolution + 1) $final_evolution); do
 		mkdir -p $LOGS_DIR/$i
 		echo ----------   Iteration $i     Evolution $e   ----------
-		eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$e.xml --feature-model=$spl/fm$spl$e.txt >> $LOGS_DIR/$i/evolution$e.out"
+		eval "$COMMAND --stats \
+      --all-configurations \
+      --uml-model=$spl/bm$spl$e.xml \
+      --feature-model=$spl/fm$spl$e.txt >> $LOGS_DIR/$i/evolution$e.out"
 	done
 done
 
@@ -69,6 +75,6 @@ for e in $(seq $(expr $initial_evolution + 1) $final_evolution); do
 	for i in $(seq 1 $iterations ); do
 		cat $LOGS_DIR/$i/evolution$e.out | grep "Total analysis" | awk '{print $4}' >> $LOGS_DIR/analysisTime.out
 		cat $LOGS_DIR/$i/evolution$e.out | grep "Total running" | awk '{print $4}' >> $TIME_LOG_FILE
-		cat $LOGS_DIR/$i/evolution$e.out | grep "Total memory" | awk '{print $4}' >> $MEMORY_LOG_FILE
+		cat $LOGS_DIR/$i/evolution$e.out | grep "Maximum memory" | awk '{print $4}' >> $MEMORY_LOG_FILE
 	done
 done
