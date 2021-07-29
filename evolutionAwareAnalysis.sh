@@ -31,11 +31,11 @@ COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 PERSISTED_ANALYSES_PATH=Analyses/$spl
 # Path were we save analysis stats
 LOGS_DIR=$PERSISTED_ANALYSES_PATH/logs
-MEMORY_DIR=$PERSISTED_ANALYSES_PATH/logs/memory_usage
-TIME_DIR=$PERSISTED_ANALYSES_PATH/logs/running_time
+MEMORY_DIR=$PERSISTED_ANALYSES_PATH/logs/data/memory_usage
+TIME_DIR=$PERSISTED_ANALYSES_PATH/logs/data/running_time
 
-MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory"$SPL"ReanaE.out
-TIME_LOG_FILE=$MEMORY_DIR/totalTime"$SPL"ReanaE.out
+MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${SPL}ReanaE.out
+TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
 
 # 1st step: perform the analysis of the original spl
 echo "1st step - analysis of the original spl"
