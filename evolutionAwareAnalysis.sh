@@ -1,30 +1,12 @@
 #!/bin/bash
 
-# Runtime configuration
-LIBS="libs/*"
-CLASSES="out/production/reana-spl"  # Change this to the path where your IDE puts compiled classes
-CLASSPATH=$CLASSES:$LIBS
-
-# Default values
 JAR="reanaE.jar"
 xms=1024m
 xmx=15360m
-spl=${spl:-BSN}
+spl=$1
 initial_evolution=0
-final_evolution=5
-iterations=5
-
-# Usage mode ./evolutionAwareAnalysis <<spl>> <<initial_evolution>> <<final_evolution>> <<iterations>> <<persist>> <<xms>> <<xmx>>
-# Declare parameters and assign their values.
-
-while [ $# -gt 0 ]; do
-	if [[ $1 == *"--"* ]]; then
-		param="${1/--/}"
-		declare $param="$2"
-	fi
-
-	shift
-done
+final_evolution=$2
+iterations=$3
 
 COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 # Path were we dump and read ADDs for previous analyses
