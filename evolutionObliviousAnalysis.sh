@@ -57,7 +57,7 @@ for i in $(seq 1 $iterations ); do
 	for e in $(seq $(expr $initial_evolution + 1) $final_evolution); do
 		mkdir -p $LOGS_DIR/$i
 		echo ----------   Iteration $i     Evolution $e   ----------
-		eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$e.xml --feature-model=$spl/fm$spl$e.txt --persisted-analyses=$PERSISTED_ANALYSES_PATH >> $LOGS_DIR/$i/evolution$e.out"
+		eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$e.xml --feature-model=$spl/fm$spl$e.txt >> $LOGS_DIR/$i/evolution$e.out"
 	done
 done
 
