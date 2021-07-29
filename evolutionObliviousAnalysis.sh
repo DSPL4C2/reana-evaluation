@@ -28,7 +28,7 @@ done
 
 COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 # Path were we dump and read ADDs for previous analyses
-ANALYSES_PATH=Analyses/$spl
+ANALYSES_PATH=Analyses
 # Path were we save analysis stats
 LOGS_DIR=$ANALYSES_PATH/logs/tmp
 DATA_DIR=$ANALYSES_PATH/logs/data
