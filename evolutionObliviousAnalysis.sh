@@ -48,7 +48,7 @@ mkdir -p $LOGS_DIR
 mkdir -p $MEMORY_DIR
 mkdir -p $TIME_DIR
 
-eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$initial_evolution.xml --feature-model=$spl/fm$spl$initial_evolution.txt --persisted-analyses=$PERSISTED_ANALYSES_PATH"
+eval "$COMMAND --all-configurations --uml-model=$spl/bm$spl$initial_evolution.xml --feature-model=$spl/fm$spl$initial_evolution.txt"
 
 
 # 2nd step: perform the analysis of the evolutions
