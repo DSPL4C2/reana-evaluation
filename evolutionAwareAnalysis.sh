@@ -32,9 +32,10 @@ ANALYSES_PATH=Analyses/$spl
 PERSISTED_ANALYSES_PATH=PersistedAnalyses/$spl
 rm -rf "$PERSISTED_ANALYSES_PATH"
 # Path were we save analysis stats
-LOGS_DIR=$ANALYSES_PATH/logs
-MEMORY_DIR=$ANALYSES_PATH/logs/data/memory_usage
-TIME_DIR=$ANALYSES_PATH/logs/data/running_time
+LOGS_DIR=$ANALYSES_PATH/logs/tmp
+DATA_DIR=$ANALYSES_PATH/logs/data
+MEMORY_DIR=$DATA_DIR/memory_usage
+TIME_DIR=$DATA_DIR/running_time
 
 MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${SPL}ReanaE.out
 TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
