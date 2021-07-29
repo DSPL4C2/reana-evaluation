@@ -39,6 +39,10 @@ TIME_DIR=$ANALYSES_PATH/logs/data/running_time
 MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${SPL}ReanaE.out
 TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
 
+# cleanup previous run
+
+rm -rf $LOGS_DIR
+
 # 1st step: perform the analysis of the original spl
 echo "1st step - analysis of the original spl"
 # TODO: we have to parameterize the variableStore's location
