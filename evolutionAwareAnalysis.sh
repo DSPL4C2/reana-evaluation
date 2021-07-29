@@ -39,7 +39,6 @@ TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
 
 # 1st step: perform the analysis of the original spl
 echo "1st step - analysis of the original spl"
-rm -rf $PERSISTED_ANALYSES_PATH
 # TODO: we have to parameterize the variableStore's location
 rm variableStore.add
 
