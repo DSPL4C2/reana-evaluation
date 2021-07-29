@@ -28,11 +28,13 @@ done
 
 COMMAND="java -Xms$xms -Xmx$xmx -jar $JAR"
 # Path were we dump and read ADDs for previous analyses
-PERSISTED_ANALYSES_PATH=Analyses/$spl
+LOGS_PATH=Analyses/$spl
+PERSISETD_ANALYSES_PATH=PersistedAnalyses/$spl
+rm -rf $PERSISTED_ANALYSES_PATH
 # Path were we save analysis stats
-LOGS_DIR=$PERSISTED_ANALYSES_PATH/logs
-MEMORY_DIR=$PERSISTED_ANALYSES_PATH/logs/data/memory_usage
-TIME_DIR=$PERSISTED_ANALYSES_PATH/logs/data/running_time
+LOGS_DIR=$LOGS_PATH/logs
+MEMORY_DIR=$LOGS_PATH/logs/data/memory_usage
+TIME_DIR=$LOGS_PATH/logs/data/running_time
 
 MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${SPL}ReanaE.out
 TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
@@ -42,7 +44,7 @@ echo "1st step - analysis of the original spl"
 # TODO: we have to parameterize the variableStore's location
 rm variableStore.add
 
-mkdir -p $PERSISTED_ANALYSES_PATH
+mkdir -p $LOGS_PATH
 mkdir -p $LOGS_DIR
 mkdir -p $MEMORY_DIR
 mkdir -p $TIME_DIR
