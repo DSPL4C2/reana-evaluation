@@ -19,8 +19,8 @@ DATA_DIR=$ANALYSES_PATH/logs/data
 MEMORY_DIR=$DATA_DIR/memory_usage
 TIME_DIR=$DATA_DIR/running_time
 
-MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${SPL}ReanaE.out
-TIME_LOG_FILE=$TIME_DIR/totalTime${SPL}ReanaE.out
+MEMORY_LOG_FILE=$MEMORY_DIR/totalMemory${spl}ReanaE.out
+TIME_LOG_FILE=$TIME_DIR/totalTime${spl}ReanaE.out
 
 # cleanup previous run
 
