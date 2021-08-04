@@ -13,7 +13,7 @@ cd $EVAL_DIR || exit
 bash "$EVAL_DIR/evolutionObliviousAnalysis.sh" "$spl" "$n_evolutions" "$n_iterations"
 bash "$EVAL_DIR/evolutionAwareAnalysis.sh" "$spl" "$n_evolutions" "$n_iterations"
 
-cp -r $EVAL_DIR/Analysis/logs/data $ANALYSIS_DIR/datasets/data
+cp -r $EVAL_DIR/Analyses/logs/data $ANALYSIS_DIR/datasets/data
 
 cd $ANALYSIS_DIR || exit
 
