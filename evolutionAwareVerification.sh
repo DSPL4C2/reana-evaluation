@@ -16,7 +16,6 @@ get_seeded_random()
 xms=1024m
 xmx=15360m
 initial_evolution=0
-final_evolution=15
 iterations=1
 samples=50
 RED='\033[0;31m'
@@ -26,19 +25,20 @@ NC='\033[0m' # No Color
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
-    echo "Usage: ./evolutionAwareVerification.sh SPL <JAR1> <JAR2>"
+    echo "Usage: ./evolutionAwareVerification.sh <SPL> <Maximum evolution> <JAR1> <JAR2>"
     exit 0
 fi
 
 spl=$1
+final_evolution=$2
 
-if [ $# -eq 1 ]
+if [ $# -eq 2 ]
   then
     REANA_JAR="reana.jar"
     REANAE_JAR="reanaE.jar"
   else
-    REANA_JAR=$2
-    REANAE_JAR=$3
+    REANA_JAR=$3
+    REANAE_JAR=$4
 fi
 
 COMMAND_REANA="java -Xms$xms -Xmx$xmx -jar $REANA_JAR"
